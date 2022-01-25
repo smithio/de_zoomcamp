@@ -1,1 +1,1 @@
-# de_zoomcamp
+This is a 'quick and dirty' repository for studying an online course: [Data Engineering zoomcamp course](https://github.com/DataTalksClub/data-engineering-zoomcamp)
