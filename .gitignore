@@ -1,4 +1,5 @@
 *.txt
+*.pyc
 
 # Local .terraform directories
 **/.terraform/*
@@ -6,3 +7,6 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+
+# airflow files
+**logs/
