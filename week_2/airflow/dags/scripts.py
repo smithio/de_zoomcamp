@@ -2,6 +2,8 @@ import logging
 
 from google.cloud import storage
 
+import pandas as pd
+
 import pyarrow as pa
 import pyarrow.csv as pv
 import pyarrow.parquet as pq
@@ -11,6 +13,14 @@ def format_to_parquet(src_file):
         logging.error("Can only accept source files in CSV format, for the moment")
         return
     table = pv.read_csv(src_file)
+    pq.write_table(table, src_file.replace('.csv', '.parquet'))
+
+def format_to_parquet_pandas(src_file):
+    if not src_file.endswith('.csv'):
+        logging.error("Can only accept source files in CSV format, for the moment")
+        return
+    data_pandas = pd.read_csv(src_file)
+    table = pa.Table.from_pandas(data_pandas)
     pq.write_table(table, src_file.replace('.csv', '.parquet'))
 
 def format_to_parquet_chunks(src_file):
