@@ -203,14 +203,14 @@ models:
             desciprtion: The date and time of the trip pick-up
           - name: DropOff_datetime
             desciprtion: The date and time of the trip dropoff
-          - name: PULocationID
+          - name: pickup_locationid
             desciprtion: TLC Taxi Zone in which the trip began
             tests:
               - relationships:
                   to: ref('taxi_zone_lookup')
                   field: locationid
                   severity: warn
-          - name: DOLocationID
+          - name: dropoff_locationid
             desciprtion: TLC Taxi Zone in which the trip ended
             tests:
               - relationships:
