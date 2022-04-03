@@ -49,7 +49,7 @@ resource "google_bigquery_dataset" "dataset_ext" {
   location   = var.region
 }
 
-# partitioned
+# internal
 resource "google_bigquery_dataset" "dataset_part" {
   dataset_id = "${var.BQ_DATASET}_data"
   project    = var.project
