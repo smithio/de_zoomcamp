@@ -1,5 +1,15 @@
 # Visualizing ATP tennis data
 
+This is a demo project for visualizing ATP statistics.  
+Of course, one can go to https://www.atptour.com/ and get all the fancy graphs and stats.  
+But here the purpose is to be able to "travel in time". Just specify the date and get top-100 players with their stats up to that date.  
+
+> That is a nostalgia exercise tool 😀  
+> Go to 2003 and discover [Lleyton Hewitt](https://en.wikipedia.org/wiki/Lleyton_Hewitt)  
+> Go to 1996 and discover [Pete Sampras](https://en.wikipedia.org/wiki/Pete_Sampras)  
+> Go to 1988 and discover [Ivan Lendl](https://en.wikipedia.org/wiki/Ivan_Lendl)  
+> ...
+
 ## [🎾Final dashboard in Google Datastudio](https://datastudio.google.com/reporting/6cdac7b4-ec21-4ce4-83a9-86713c1b3e70)
 ![](/project/gifs/demo.gif)
 ----
@@ -38,3 +48,26 @@ From [source](https://github.com/JeffSackmann/tennis_atp) to Google Storage
     - serve stats: aces - df scatter
     - own breakpoints graph
     - faced breakpoints graph
+
+## Some instructions:
+
+### Terraform
+```
+cd project/terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+### Airflow
+```
+cd project/airflow
+docker-compose up
+```
+goto localhost:8080
+
+### Dbt
+goto https://cloud.getdbt.com/
+```
+dbt run --var 'is_test_run: false'
+```
