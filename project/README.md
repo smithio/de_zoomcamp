@@ -1,6 +1,7 @@
 # Visualizing ATP tennis data
 
 ## [🎾Final dashboard in Google Datastudio](https://datastudio.google.com/reporting/6cdac7b4-ec21-4ce4-83a9-86713c1b3e70)
+![](/project/gifs/demo.gif)
 ----
 
 ## Project steps:
