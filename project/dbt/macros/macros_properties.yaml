@@ -1,0 +1,17 @@
+version: 2
+
+macros:
+  - name: conv_date
+    description: >
+      This macro converts integer date 20220101 into BQ data type DATE('2022-01-01')
+    arguments:
+      - name: date_int
+        type: int
+        description: integer-typed date, e.g. 20220101
+  - name: sum_52
+    description: >
+      This macro sums the input column over the last 52 weeks
+    arguments:
+      - name: col
+        type: int
+        description: integer-typed input column

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+    - name: staging
+      database: coral-muse-339314
+      schema: tennis_data
+
+      tables:
+        - name: atp_players
+        - name: atp_matches
+        - name: atp_rankings
+
+models:
+    - name: stg_top_players
+      description: Top-100 players per every ranking_date
+    - name: stg_major_tourneys
+      description: All winners of all major tournaments (grand slams and master 1000)
+    - name: stg_dates_mapping
+      description: Mapping between ranking_date and tourney_date. Every tourney_date is assigned to a specific ranking_date

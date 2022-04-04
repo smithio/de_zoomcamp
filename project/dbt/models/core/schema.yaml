@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: current_majors
+    description: Winners of all major tournaments (grand slams and master 1000) per every ranking_date
+  - name: top_player_stats
+    description: Match stats for top-100 players per every ranking_date
