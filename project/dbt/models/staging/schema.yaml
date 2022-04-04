@@ -15,5 +15,5 @@ models:
       description: Top-100 players per every ranking_date
     - name: stg_major_tourneys
       description: All winners of all major tournaments (grand slams and master 1000)
-    - name: stg_dates_mapping
-      description: Mapping between ranking_date and tourney_date. Every tourney_date is assigned to a specific ranking_date
+    - name: stg_ranking_dates
+      description: List of distinct ranking dates
